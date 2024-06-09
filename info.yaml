@@ -17,6 +17,8 @@ project:
   source_files:        
     - "i2c_master.sv"
     - "tt_um_salomon9920_top.sv"
+    - "chu_i2c_core.sv"
+    - "uart_tx.sv"
 
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
 pinout:
