@@ -9,12 +9,14 @@ You can also include images in this folder and reference them in the markdown. E
 
 ## How it works
 
-Explain how your project works
+Se realiza la comunicacion por medio del protocolo i2c , entre nuestra placa basys3 y el sensor de temperatura lm75
 
 ## How to test
 
-Explain how to use your project
+se lee el registro y se obtienen los datos que nos proporciona el sensor
 
 ## External hardware
 
-List external hardware used in your project (e.g. PMOD, LED display, etc), if any
+FPGA basys 3
+sensor de temperatura LM75
+
