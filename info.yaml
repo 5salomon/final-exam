@@ -15,7 +15,8 @@ project:
   
   # List your project's source files here. Source files must be in ./src and you must list each source file separately, one per line:
   source_files:        
-    - "project.v"
+    - "i2c_master.sv"
+    - "tt_um_salomon9920_core.sv"
 
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
 pinout:
