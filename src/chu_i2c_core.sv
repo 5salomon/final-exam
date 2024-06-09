@@ -1,27 +1,6 @@
-`timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 09.06.2024 00:51:09
-// Design Name: 
-// Module Name: tt_um_salomon9920_core
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
-
-
-module tt_um_salomon9920_core(
-input logic clk,
+module chu_i2c_core
+    (
+    input logic clk,
     input logic reset,
     //slot interface
     input logic cs,
@@ -56,8 +35,8 @@ input logic clk,
             if (wr_dvsr)
                 dvsr_reg <= wr_data [15:0];
     //decoding
-    assign wr_dvsr = cs & write & addr[1:0]==2'b01;
-    assign wr_i2c  = cs & write & addr[1:0]==2'b10;
+    assign wr_dvsr = cs & write & ~addr[0];
+    assign wr_i2c  = cs & write & addr[0];
     // read data
-    assign rd_data = {22'b0, ack, ready, dout};   
+    assign rd_data = {22'b0, ack, ready, dout};     
 endmodule
